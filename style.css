@@ -5,11 +5,9 @@ body {
     padding: a;
     font-family: 'Roboto Mono', sans-serif;
     height: 100%;
-    overflow: hidden;
+    color: aliceblue;
+    overflow: scroll;
     overflow-x: hidden;
-    color: aliceblue
-    
-    
 }
 
 /* HEADER */
@@ -43,7 +41,7 @@ h2 {
 .social-media {
     margin-top: 1rem;
     display: flex;
-    background-color: black;
+    background-color: #1c246c;
 }
 
 .social-media a {
@@ -63,10 +61,10 @@ h2 {
 }
 
 a:hover {
-    background-color: aliceblue;
+    background-color: black;
 }
 
-/* MENU HAMBURGUER */
+/* MENU HAMBURGUER
 
 .checkbox-container {
     display: flex;
@@ -113,11 +111,12 @@ a:hover {
 
 #toggle {
     display: none;
+    visibility: hidden;
 }
 
 /* MENU */
 
-.menu {
+/* .menu {
     position: absolute;
     top: 28px;
     right: 30px;
@@ -156,9 +155,9 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 40px;
-}
+} */
 
-/* ANIMAÇÃO DO MENU */
+/* ANIMAÇÃO DO MENU 
 
 #toggle:checked + .checkbox .trace:nth-child(1) {
     transform: rotate(45deg);
@@ -189,4 +188,127 @@ a:hover {
 #toggle:checked ~ .menu-items {
     visibility: visible;
     opacity: 1;
+} */
+
+/* CARDS */
+
+.container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+/* for DESKTOP */
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c246c;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    filter: grayscale(0,5);
+    color: black;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card-text {
+    width: 40%;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: bold;
+}
+
+.card-wrapper {
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid white;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper p {
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    filter: unset;
+}
+
+.card:hover > .card-wrapper::before {
+    height: 250px;
+    width: 250px;
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: #1c246c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.footer h5 {
+    font-size:  10px;
+    font-family: 'Roboto Mono', sans-serif;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 10px;
+    font-family: 'Roboto Mono', sans-serif;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
 }
